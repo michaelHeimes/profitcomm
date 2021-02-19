@@ -1,0 +1,63 @@
+header.header {
+	padding-bottom: 1.3em;
+	
+	.top-bar {
+		flex-wrap: wrap;
+	
+		.top-bar-top {
+			flex: 1 1 100%;
+			padding-top: 1.45em;
+			padding-bottom: .65em;
+			
+			#pre-nav {
+				display: flex;
+				justify-content: flex-end;
+				
+				li {
+					
+				&:not(:last-child){
+					margin-right: 2.75em;
+				}
+					
+					a {
+						color: $theme-green;
+						font-size: rem-calc(14);
+						font-weight: 400;
+					}
+				}
+				
+			}
+
+		}
+		
+		.top-bar-right {
+			padding-top: .95em;
+		
+			> ul {
+			
+			&.menu {
+				display: flex;
+				justify-content: flex-end;
+				
+				li {
+					
+				&:not(:last-child){
+					margin-right: 2.15em;
+				}
+				
+					a {
+						color: $white;
+						font-size: rem-calc(17);
+						font-weight: 500;
+					}
+				}
+			
+			}
+			
+			}
+		
+		}
+	
+	}
+	
+}

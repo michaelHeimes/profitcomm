@@ -1,0 +1,44 @@
+body.vendor-audit {
+	
+}
+
+body.rfp-alternative {
+	
+	header.header {
+		background-color: $theme-green;
+		
+		ul.menu#pre-nav li a {
+			color: $white;
+		}
+	
+	}
+	
+	article.page {
+		header.article-header {
+			background-color: $theme-green;
+		}
+	}
+	
+	.content.insight-content {
+		border-color: $theme-green;
+	}
+	
+}
+
+body.vendor-management {
+	
+}
+
+body.relocation-kit {
+	
+}
+
+article.insight-card {
+	
+	&.rfp-alternative {
+		.inner {
+			background-color: $theme-green;
+		}
+	}
+	
+}

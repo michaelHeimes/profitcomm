@@ -1,0 +1,33 @@
+section.blue-box-copy-and-button-link {
+	
+	.grid-container {
+		padding-top: 0;
+		padding-bottom: 0;
+		max-width: 1134px;
+		
+		.grid-x {
+			padding-top: 7.5em;
+			padding-bottom: 5.35em;
+			background-color: $theme-blue;
+			color: $white;
+			
+			h2 {
+				color: $white;
+				margin-bottom: 2em;
+			}
+			
+			p {
+				font-size: rem-calc(33);
+				line-height: 1.5757;
+				margin-bottom: 1.34em;
+			}
+			
+			a.button {
+				background-color: $theme-purple;
+			}
+			
+		}
+		
+	}
+	
+}

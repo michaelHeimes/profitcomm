@@ -1,0 +1,92 @@
+.single-insights_post {
+	
+	.content {
+		border-top: 187px solid transparent;
+		padding-top: 8em;
+		
+		.byline {
+			color: $heading-black;
+			font-weight: 500;
+			padding-bottom: 1.9em;
+			
+			.button {
+				margin-bottom: 2em;
+				
+				@include breakpoint(medium) {
+					margin-bottom: 0;
+				}
+				
+			}
+			
+		}
+		
+		h1.single-title {
+			margin-bottom: 1.11em;
+		}
+			
+		.sbs-img {
+			margin-bottom: 3em;
+			
+			p {
+				margin-right: -1.25rem;
+				margin-left: -1.25rem;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				
+				@include breakpoint(medium) {
+					margin-right: -2rem;
+					margin-left: -2rem;					
+				}
+				
+				img {
+					display: block;
+					padding-right: 1.25rem;
+					padding-left: 1.25rem;
+					flex: 0 0 auto;
+					width: 50%;
+					
+					@include breakpoint(medium) {
+						padding-right: 2rem;
+						padding-left: 2rem;						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+		section.entry-content {
+	    	padding-bottom: 4.95em;
+		}
+		
+		.article-footer {
+			
+			.small-caps.share-label {
+				color: $theme-green;
+				padding-bottom: 1.75em;
+			}
+			
+			.a2a_kit.a2a_default_style {
+				a {
+					float: none;
+				}
+			}
+		}
+		
+	}
+			
+}
+
+article.insight-card {
+	color: $white;
+	
+	.bottom {
+		h3,
+		a.small-caps {
+			color: $white;
+		}
+	}
+	
+}

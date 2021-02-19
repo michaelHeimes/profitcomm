@@ -1,0 +1,36 @@
+.two-column-list {
+	
+	.copy-wrap {
+		h2 {
+			font-size: rem-calc(38);
+			line-height: 1.0666;
+			margin-bottom: .34em;
+			
+			@include breakpoint(medium) {
+				font-size: rem-calc(60);
+			}
+	
+		}
+	}
+	
+	.list-wrap {
+		
+		ul {
+			@include breakpoint(medium) {
+				columns: 2;
+				margin-bottom: 0;
+			}
+			
+			li {
+				margin-top: -1px;
+				border-top: 1px solid $heading-black;
+				border-bottom: 1px solid $heading-black;
+				font-size: rem-calc(24);
+				font-weight: 400;
+				break-inside: avoid-column;
+			}
+		}
+		
+	}
+	
+}
