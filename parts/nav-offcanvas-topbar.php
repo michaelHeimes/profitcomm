@@ -4,6 +4,9 @@
  *
  * For more info: http://jointswp.com/docs/off-canvas-menu/
  */
+ 
+ $theme = get_field('page_theme');
+ 
 ?>
 
 <div class="top-bar" id="top-bar-menu">
@@ -15,7 +18,7 @@
 			
 			<li><a href="<?php echo home_url(); ?>">
 			
-			<?php if( get_field('page_theme') == 'rfp-alternative' ):?>
+			<?php if(  $theme['value'] == 'rfp-alternative' ):?>
 				
 				<?php 
 				$image = get_field('top_bar_logo_white', 'option');

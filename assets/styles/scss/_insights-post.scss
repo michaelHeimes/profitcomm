@@ -69,10 +69,26 @@
 			}
 			
 			.a2a_kit.a2a_default_style {
+				display: flex;
+				justify-content: center;
 				a {
+					margin-left: .5em;
+					margin-right: .5em;
+					border-radius: 100%;
+					width: 32px;
+					height: 32px;
+					background-color: $heading-black;
 					float: none;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
 				}
 			}
+			
+			.post-grid {
+				padding-top: 4.6em;
+			}
+			
 		}
 		
 	}
@@ -81,12 +97,43 @@
 
 article.insight-card {
 	color: $white;
+	margin-bottom: 2.5rem;
 	
-	.bottom {
-		h3,
-		a.small-caps {
-			color: $white;
+	.inner {
+		height: 100%;
+		border-radius: $global-radius;
+		overflow: hidden;
+	
+		.bottom {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 0 2.9em 2.55em;
+	
+			h3,
+			a.small-caps {
+				color: $white;
+			}
+			
+			h3 {
+				font-size: rem-calc(23);
+				line-height: 1.3478;
+			}
+			
+			p,
+			.small-caps {
+				font-size: rem-calc(12);
+			}
+			
 		}
+	
 	}
+
+&:nth-child(3n+2) {
+	@include breakpoint(tablet) {
+		position: relative;
+		top: 6.45em;
+	}
+}
 	
 }

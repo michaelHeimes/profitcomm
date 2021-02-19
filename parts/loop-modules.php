@@ -13,6 +13,12 @@
 		get_template_part('modules/image_left_&_copylink-button_right');
 	
 	endif;?>
+	
+	<?php if ( get_row_layout() == 'recent_insights' ) : 
+	
+		get_template_part('modules/recent_insights');
+	
+	endif;?>
 
 	<?php if ( get_row_layout() == 'two_column_list' ) : 
 	

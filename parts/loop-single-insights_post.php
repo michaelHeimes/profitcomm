@@ -37,13 +37,13 @@ $theme = get_field('page_theme');
 					
 						<div class="a2a_kit a2a_default_style">
 						    <a class="a2a_button_facebook">
-						        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-facebook.svg"/>
+						        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-facebook-white.svg"/>
 						    </a>
 						    <a class="a2a_button_twitter">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-twitter.svg"/>
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-twitter-white.svg"/>
 						    </a>	    
 							<a class="a2a_button_linkedin" data-url="<?php echo get_permalink();?>">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin.svg"/>
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin-white.svg"/>
 							</a>
 					
 						</div>
@@ -52,7 +52,7 @@ $theme = get_field('page_theme');
 				
 						
 						
-						<div class="post-grid grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3">
+						<div class="post-grid grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3" data-equalizer data-equalize-on="medium" data-equalize-on-stack="true">
 				
 				
 							<?php

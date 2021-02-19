@@ -27,13 +27,20 @@ $all_classes = $theme['value']." ".$added_classes;
 	    	
     	</div>
 
-		<div class="bottom">
+		<div class="bottom" data-equalizer-watch>
 			
-			<h3><?php the_title();?></h3>
+			<div class="text-wrap">
 			
-			<p><?php the_field('excerpt');?></p>
+				<h3><?php the_title();?></h3>
+				
+				<p><?php the_field('excerpt');?></p>
 			
-			<a class="small-caps" href="<?php echo get_permalink();?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read More</a>
+			</div>
+			
+			<div class="link-wrap">
+				<a class="small-caps" href="<?php echo get_permalink();?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read More</a>
+			</div>
+				
 		</div>
 	
 	</div>
