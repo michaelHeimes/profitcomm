@@ -1,0 +1,27 @@
+.copy-columns {
+	background-color: $theme-purple;
+	color: $white;
+	padding-top: 4.2em;
+	padding-bottom: 3.55em;
+	
+	h2,
+	h3 {
+		color: $white;
+	}
+	
+	h2 {
+		margin-bottom: 1.75em;
+	}
+		
+	.single-col {
+		margin-bottom: 1em;
+		
+		h3 {
+			font-size: rem-calc(24);
+			color: $theme-green;
+			margin-bottom: 0.7em;
+		}
+		
+	}
+	
+}

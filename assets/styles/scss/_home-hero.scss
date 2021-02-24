@@ -1,0 +1,52 @@
+.home-hero {
+	background-color: #001E31;
+	color: $white;
+	position: relative;
+	padding-top: 5.4em;
+    padding-bottom: 5.9em;
+	
+	.left {
+	
+		h1 {
+			color: $white;
+		}
+		
+		a.button {
+			text-transform: uppercase;
+			background-color: $theme-brown;
+		}
+	
+	}
+	
+	.right {
+		color: $white;
+	}
+	
+	.cta-wrap {
+		position: absolute;
+		right: -2em;
+		bottom: 5.9em;
+		
+		background-color: $theme-green;
+		border-radius: $global-radius;
+		padding: 1.85em 4em 1.85em 3em;
+				
+		h2,
+		a {
+			color: $white;
+		}
+		
+		h2 {
+			margin-bottom: .3em;
+		}
+		
+		a {
+			span {
+				display: inline-block;
+				margin-right: 6px;
+			}
+		}
+	
+	}
+	
+}

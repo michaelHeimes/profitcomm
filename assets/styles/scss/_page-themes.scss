@@ -2,6 +2,29 @@ body.vendor-audit {
 	
 }
 
+body.vendor-audit {
+	
+	header.header {
+		background-color: $theme-purple;
+		
+		ul.menu#pre-nav li a {
+			color: $white;
+		}
+	
+	}
+	
+	article.page {
+		header.article-header {
+			background-color: $theme-purple;
+		}
+	}
+	
+	.content.insight-content {
+		border-color: $theme-green;
+	}
+	
+}
+
 body.rfp-alternative {
 	
 	header.header {
@@ -27,18 +50,119 @@ body.rfp-alternative {
 
 body.vendor-management {
 	
+	header.header {
+		background-color: $theme-brown;
+		
+		ul.menu#pre-nav li a {
+			color: $white;
+		}
+	
+	}
+	
+	article.page {
+		header.article-header {
+			background-color: $theme-brown;
+		}
+	}
+	
+	.content.insight-content {
+		border-color: $theme-green;
+	}
+	
 }
 
 body.relocation-kit {
+	
+	header.header {
+		background-color: $theme-blue;
+		
+		ul.menu#pre-nav li a {
+			color: $white;
+		}
+	
+	}
+	
+	article.page {
+		header.article-header {
+			background-color: $theme-blue;
+		}
+	}
+	
+	.content.insight-content {
+		border-color: $theme-green;
+	}
 	
 }
 
 article.insight-card {
 	
+	&.vendor-audit  {
+		.inner {
+			background-color: $theme-purple;
+			
+			.top {
+				svg {
+					path {
+						fill: $theme-purple;
+					}
+				}
+
+			}
+			
+		}
+	}
+
 	&.rfp-alternative {
 		.inner {
 			background-color: $theme-green;
+			
+			.top {
+				svg {
+					path {
+						fill: $theme-green;
+					}
+				}
+
+			}
+			
 		}
+		
+		
+	}
+	
+	&.vendor-management {
+		.inner {
+			background-color: $theme-brown;
+			
+			.top {
+				svg {
+					path {
+						fill: $theme-brown;
+					}
+				}
+
+			}
+			
+		}
+
+		
+	}
+	
+	&.relocation-kit {
+		.inner {
+			background-color: $theme-blue;
+			
+			.top {
+				svg {
+					path {
+						fill: $theme-blue;
+					}
+				}
+
+			}
+			
+		}
+
 	}
 	
 }

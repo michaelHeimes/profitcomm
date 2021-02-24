@@ -1,6 +1,10 @@
 header.header {
 	padding-bottom: 1.3em;
 	
+&.has-home-hero {
+	background-color: #001e31;
+}
+	
 	.top-bar {
 		flex-wrap: wrap;
 	

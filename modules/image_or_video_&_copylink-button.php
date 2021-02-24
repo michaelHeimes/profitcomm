@@ -1,6 +1,6 @@
-<section class="image-left-copy-link-right module">
-	<div class="grid-container">
-		<div class="grid-x grid-padding-x">
+<section class="image-copy-link module">
+	<div class="grid-container<?php if( get_field('width') == 'wide' ):?> fluid<?php endif;?>">
+		<div class="grid-x grid-padding-x layout-<?php the_sub_field('layout');?>">
 			
 			<div class="left cell small-12 medium-6">
 
@@ -56,16 +56,12 @@
 						<h5><?php echo $pre_heading;?></h5>
 					<?php endif;?>
 	
-					<?php if( get_sub_field('add_quote_above_heading') == 'true' ):?>
+					<?php if( get_sub_field('add_quote_above_copy') == 'true' ):?>
 						<img class="quote" src="<?php echo get_template_directory_uri(); ?>/assets/images/quote.svg"/>
 					<?php endif;?>
-	
-					<?php if( $heading = get_sub_field('heading') ):?>
-						<h2><?php echo $heading;?></h2>
-					<?php endif;?>
-					
+
 					<?php if( $copy = get_sub_field('copy') ):?>
-						<p><?php echo $copy;?></p>
+						<div class="copy-wrap"><?php echo $copy;?></div>
 					<?php endif;?>
 		
 					<?php 

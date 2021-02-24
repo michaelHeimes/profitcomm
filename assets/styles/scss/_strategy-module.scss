@@ -1,0 +1,70 @@
+.strategy-module {
+	background-color: $theme-brown;
+	color: $white;
+	
+	> .grid-container {
+		padding-top: 5.35em;
+		padding-bottom: 3.65em;
+	}
+	
+	h2,
+	h3,
+	h4 {
+		color: $white;
+	}
+	
+	.logo-wrap {
+		padding-bottom: 1.9em;
+	}
+	
+	h2.h1 {
+		margin-bottom: .57em;
+	}
+	
+	.copy-wrap {
+		padding-bottom: 4.3em;
+	}
+	
+	h3.h2 {
+		margin-bottom: 1.89em;
+	}
+	
+	h4 {
+		margin-bottom: .48em;
+	}
+	
+	.single-step {
+		margin-bottom: 1em;
+		
+		.icon-wrap {
+			position: relative;
+			img {
+				margin-bottom: 1.2em;
+			}
+		}
+		
+		p {
+			font-size: rem-calc(15);
+			font-weight: 500;
+			line-height: 1.4;
+		}
+		
+	.icon-wrap:after {
+		content: url('../images/chevron-right-white.svg');
+		position: absolute;
+		right: -1.25rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+		
+	&:first-child,
+	&:last-child {
+		.icon-wrap:after {
+			content: '';
+		}
+	}
+		
+		
+	}
+	
+}

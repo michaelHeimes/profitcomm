@@ -1,0 +1,67 @@
+.accordions.module {
+	
+	h2 {
+		margin-bottom: .55em;
+	}
+	
+	p {
+		margin-bottom: 3.35em;
+	}
+	
+	.accordion {
+		
+		.single-accordion {
+			border-top: 1px solid $theme-purple;
+			border-bottom: 1px solid $theme-purple;					margin-top: -1px;
+			padding: 1.8em .15em 1.8em 1.95em;
+						
+			a.accordion-title {
+				border: 0;
+				border-radius: 0;
+				font-weight: 500;
+				color: $theme-purple;
+				padding-right: 2.5em;
+				
+			&:before {
+				content: url('../images/chevron-up.svg');
+				transition: transform .3s ease;
+			}
+				
+			}
+			
+			.accordion-content {
+				
+				
+				
+				
+			&.cols-2 {
+				ul {
+					columns: 2
+				}
+			}
+
+			&.cols-3 {
+				ul {
+					columns: 3;
+				}
+			}
+			
+			&.cols-4 {
+				ul {
+					columns: 4;
+				}
+			}
+				
+			}
+		
+		&.is-active {
+			a:before {
+				transform: rotateX(180deg);
+			}
+		}
+			
+		}
+		
+	}
+	
+}

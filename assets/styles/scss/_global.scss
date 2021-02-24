@@ -78,8 +78,13 @@ POSTS & CONTENT STYLES
 	time {}
 }
 
+.home-hero,
+header.article-header {
+	margin-bottom: 3.6em;
+}
+
 section.module {
-	.grid-container {
+	> .grid-container {
 		padding-top: 5.09em;
 		padding-bottom: 5.09em;
 	}

@@ -1,4 +1,24 @@
-.image-left-copy-link-right {
+.image-copy-link {
+	
+	>.grid-container {
+	
+	&.fluid {
+		max-width: 1150px;
+	}
+	
+		> .grid-x {
+			
+		&.layout-image-right {
+			
+			@include breakpoint (medium) {
+				flex-direction: row-reverse;
+			}
+			
+		}
+			
+		}
+	
+	}
 	
 	.left {
 

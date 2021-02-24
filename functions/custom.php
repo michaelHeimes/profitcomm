@@ -30,7 +30,7 @@ if( function_exists('acf_set_options_page_title') ) {
 // Add Page Theme to Body classes
 function add_acf_body_class($class) {
 	
-	if ( !is_search() ) {
+	if ( get_field('page_theme', $post->ID) ) {
     	$value = get_field('page_theme', $post->ID);
     }
     $class[] = $value['value'];

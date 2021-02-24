@@ -95,7 +95,9 @@
 			
 }
 
+
 article.insight-card {
+	max-width: 335px;
 	color: $white;
 	margin-bottom: 2.5rem;
 	
@@ -103,12 +105,25 @@ article.insight-card {
 		height: 100%;
 		border-radius: $global-radius;
 		overflow: hidden;
+		
+		.top {
+			position: relative;
+			
+			svg {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+			}
+			
+		}
 	
 		.bottom {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			padding: 0 2.9em 2.55em;
+			padding: 2.4em 2.9em 2.55em;
 	
 			h3,
 			a.small-caps {
@@ -137,3 +152,4 @@ article.insight-card {
 }
 	
 }
+	

@@ -1,0 +1,80 @@
+.theme-cards {
+	
+	>.grid-container {
+		> .grid-x {
+			max-width: 1200px;
+			margin: auto;
+		}
+	}
+	
+	.cell {
+		padding-left: .7rem;
+		padding-right: .7rem;
+		margin-bottom: 1.4rem;
+	
+		.inner {
+			border-radius: $global-radius;
+			height: 100%;
+			padding: 2.4em 2.2em 2.3em;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			color: $white;
+			
+			.top {
+				padding-bottom: 1.95em;
+			
+				h2 {
+					color: $white;
+					margin-bottom: .6em;
+				}
+				
+				p {
+					font-size: rem-calc(14);
+					font-weight: 500;
+					line-height: 1.78;
+				}
+				
+			}
+			
+		&.theme-vendor-audit {
+			background-color: $theme-purple;
+			
+			a.button {
+				background-color: $theme-blue;
+			}
+			
+		}
+		
+		&.theme-rfp-alternative{
+			background-color: $theme-green;
+			
+			a.button {
+				background-color: #32D16E;
+			}
+			
+		}
+		
+		&.theme-vendor-management {
+			background-color: $theme-brown;
+			
+			a.button {
+				background-color: #F2AE74;
+			}
+			
+		}
+		
+		&.theme-relocation-kit {
+			background-color: $theme-blue;
+			
+			a.button {
+				background-color: $theme-purple;
+			}
+			
+		}
+					
+		}
+		
+	}
+	
+}
