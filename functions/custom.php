@@ -39,6 +39,19 @@ function add_acf_body_class($class) {
 add_filter('body_class', 'add_acf_body_class');
 
 
+// Add Site Theme tax slug to body class
+function add_taxonomy_to_single( $classes ) {
+        global $post;
+        $my_terms = get_the_terms( $post->ID, 'site_theme' );
+        if ( $my_terms && ! is_wp_error( $my_terms ) ) {
+            $classes[] = $my_terms[0]->slug;
+        }
+        return $classes;
+}
+if ( is_single() ) {
+	add_filter( 'body_class', 'add_taxonomy_to_single' );
+}
+
 // Callback function to insert 'styleselect' into the $buttons array
 function add_style_select_buttons( $buttons ) {
     array_unshift( $buttons, 'styleselect' );

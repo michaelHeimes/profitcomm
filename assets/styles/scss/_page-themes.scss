@@ -96,7 +96,7 @@ body.relocation-kit {
 
 article.insight-card {
 	
-	&.vendor-audit  {
+	&.site_theme-vendor-audit  {
 		.inner {
 			background-color: $theme-purple;
 			
@@ -112,7 +112,7 @@ article.insight-card {
 		}
 	}
 
-	&.rfp-alternative {
+	&.site_theme-rfp-alternative {
 		.inner {
 			background-color: $theme-green;
 			
@@ -130,7 +130,7 @@ article.insight-card {
 		
 	}
 	
-	&.vendor-management {
+	&.site_theme-vendor-management {
 		.inner {
 			background-color: $theme-brown;
 			
@@ -148,7 +148,7 @@ article.insight-card {
 		
 	}
 	
-	&.relocation-kit {
+	&.site_theme-relocation-kit {
 		.inner {
 			background-color: $theme-blue;
 			
@@ -163,6 +163,27 @@ article.insight-card {
 			
 		}
 
+	}
+	
+}
+
+
+button {
+	
+	&.vendor-audit {
+		background-color: $theme-purple;
+	}
+	
+	&.rfp-alternative {
+		background-color: $theme-green;
+	}
+	
+	&.vendor-management {
+		background-color: $theme-brown;
+	}
+	
+	&.relocation-kit {
+		background-color: $theme-blue;
 	}
 	
 }

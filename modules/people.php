@@ -7,6 +7,7 @@
 			</div>
 
 			<?php if( have_rows('people') ):?>
+			<div class="cell">
 				<?php while ( have_rows('people') ) : the_row();?>	
 				
 				<?php if( have_rows('single_person') ):?>
@@ -14,7 +15,7 @@
 				
 					<div class="single-person grid-x grid-padding-x">
 	
-						<div class="left cell">
+						<div class="left cell small-12 medium-3">
 						<?php 
 						$image = get_sub_field('photo');
 						if( !empty( $image ) ): ?>
@@ -24,8 +25,10 @@
 						<?php endif; ?>
 						</div>
 			
-						<div class="right cell">
-							<?php the_sub_field('editor');?>
+						<div class="right cell small-12 medium-9">
+							<h3><?php the_sub_field('name');?></h3>
+							<div class="title"><?php the_sub_field('title');?></div>
+							<div class="bio-wrap"><?php the_sub_field('bio');?></div>
 						</div>
 					
 					</div>
@@ -34,6 +37,7 @@
 				<?php endif;?>
 							
 				<?php endwhile;?>
+			</div>
 			<?php endif;?>
 
 		</div>

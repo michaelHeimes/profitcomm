@@ -1,11 +1,20 @@
 <?php
 /**
  * Template part for displaying a single post
- */
- 
-$theme = get_field('page_theme');
- 
+ */ 
 ?>
+
+<?php
+	$args = array(
+		'post_type'  => 'insights_post',
+		'taxonomy' => 'site_theme'
+	);
+	$terms = get_terms($args);
+?>
+
+<?php foreach ($terms as $term): ?>
+
+<?php endforeach; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 	<div class="grid-container">
@@ -55,16 +64,17 @@ $theme = get_field('page_theme');
 						<div class="post-grid grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3" data-equalizer data-equalize-on="medium" data-equalize-on-stack="true">
 				
 				
+<!--
 							<?php
 						    $args = array(  
 						        'post_type' => 'insights_post',
 						        'post_status' => 'publish',
 						        'posts_per_page' => 6,
-						        'post__not_in' => array( $post->ID ),
-							    'meta_query' => array(
+								'tax_query' => array(
 							        array(
-							            'key'   => 'page_theme',
-							            'value' => $theme['value'],
+							            'taxonomy' => 'site_theme',
+							            'field' => 'slug',
+							            'terms' => $theme_tax,
 							        )
 							    )
 						    );
@@ -79,6 +89,7 @@ $theme = get_field('page_theme');
 						
 						    wp_reset_postdata(); 
 						    ?>
+-->
 							
 						</div>
 				

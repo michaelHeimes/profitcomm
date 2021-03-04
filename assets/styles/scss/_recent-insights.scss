@@ -1,6 +1,8 @@
 .recent-insights.module {
 	
-	.grid-container {
+	.grid-container.fluid {
+		max-width: 78.376em;
+		
 		@include breakpoint (tablet) {
 			padding-bottom: 11.3em;
 		}
@@ -24,11 +26,7 @@
 			}
 			
 		}
-		
-		.post-grid {
-    		justify-content: center;
-		}
-	
+			
 	}
-	
+		
 }

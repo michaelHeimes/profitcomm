@@ -4,8 +4,10 @@
  *
  * For more info: http://jointswp.com/docs/off-canvas-menu/
  */
- 
-$theme = get_field('page_theme');
+
+if ( !is_single() ) {
+	$theme = get_field('page_theme');
+}
  
 ?>
 

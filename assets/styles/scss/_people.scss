@@ -1,5 +1,38 @@
 .people {
 	
+	h2 {
+		margin-bottom: .99em;
+	}
+	
+	.single-person {
+		
+		.left {	
+		
+			.img-wrap {
+				max-width: 192px;
+				border-radius: $global-radius;
+				overflow: hidden;
+			}
+		
+		}
+		
+		.right {
+			padding-top: 1.1em;
+			
+			
+			
+			.title {
+				color: $heading-black;
+				font-size: rem-calc(18);
+				font-weight: 500;
+				line-height: 1.7222;
+				padding-bottom: 1.5em;
+			}
+			
+			
+		}
+		
+	}
 	
 	
 }

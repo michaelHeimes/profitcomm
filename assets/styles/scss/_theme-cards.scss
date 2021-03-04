@@ -37,6 +37,12 @@
 				
 			}
 			
+			.bottom {
+				a.button {
+					width: 100%;
+				}
+			}
+			
 		&.theme-vendor-audit {
 			background-color: $theme-purple;
 			

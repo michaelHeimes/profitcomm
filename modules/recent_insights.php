@@ -1,7 +1,10 @@
-<?php $theme = get_field('page_theme');?>
+<?php
+	$theme = get_field('page_theme');
+	$theme_tax = $theme['value'];
+?>
 
 <section class="recent-insights module">
-	<div class="grid-container">
+	<div class="grid-container fluid">
 		
 		<div class="top-wrap">
 			<div class="inner text-center">
@@ -38,10 +41,11 @@
 			        'post_type' => 'insights_post',
 			        'post_status' => 'publish',
 			        'posts_per_page' => 6,
-				    'meta_query' => array(
+					'tax_query' => array(
 				        array(
-				            'key'   => 'page_theme',
-				            'value' => $theme['value'],
+				            'taxonomy' => 'site_theme',
+				            'field' => 'slug',
+				            'terms' => $theme_tax,
 				        )
 				    )
 			    );

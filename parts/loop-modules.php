@@ -14,12 +14,6 @@
 	
 	endif;?>
 
-	<?php if ( get_row_layout() == 'blue_box_copy_and_button_link' ) : 
-	
-		get_template_part('modules/blue_box_copy_and_button_link');
-	
-	endif;?>
-
 	<?php if ( get_row_layout() == 'copy_columns_and_centered_heading' ) : 
 	
 		get_template_part('modules/copy_columns_and_centered_heading');
@@ -47,6 +41,12 @@
 	<?php if ( get_row_layout() == 'recent_insights' ) : 
 	
 		get_template_part('modules/recent_insights');
+	
+	endif;?>
+
+	<?php if ( get_row_layout() == 'slider_module' ) : 
+	
+		get_template_part('modules/slider_module');
 	
 	endif;?>
 
