@@ -76,7 +76,7 @@
 								</div>
 							
 							<div class="small-12 medium-12 large-12 cell">
-								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a href="https://proprdesign.com/" target="_blank">Designed by Propr</a></p>
+								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a href="https://proprdesign.com/" target="_blank">Made by Propr Design</a></p>
 							</div>
 						
 						</div> <!-- end #inner-footer -->

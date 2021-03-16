@@ -48,9 +48,8 @@ function add_taxonomy_to_single( $classes ) {
         }
         return $classes;
 }
-if ( is_single() ) {
-	add_filter( 'body_class', 'add_taxonomy_to_single' );
-}
+add_filter( 'body_class', 'add_taxonomy_to_single' );
+
 
 // Callback function to insert 'styleselect' into the $buttons array
 function add_style_select_buttons( $buttons ) {

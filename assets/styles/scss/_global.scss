@@ -53,6 +53,12 @@ a.button,
 		cursor: default;		
 	}
 	
+	&.no-style {
+		min-width: 0;
+		padding: 0;
+		border-radius: 0;
+	}
+	
 }
 
 .small-caps {
@@ -96,6 +102,19 @@ section.module {
 		padding-top: 5.09em;
 		padding-bottom: 5.09em;
 	}
+	
+&.no-top-padding {
+	> .grid-container {
+		padding-top: 0;
+	}
+}
+
+&.no-bottom-padding {
+	> .grid-container {
+		padding-bottom: 0;
+	}
+}
+	
 }
 
 // Entry content  

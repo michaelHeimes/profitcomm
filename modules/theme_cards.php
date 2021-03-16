@@ -1,4 +1,4 @@
-<section class="theme-cards module">
+<section class="theme-cards module<?php if(get_sub_field('remove_top_padding')):?> no-top-padding<?php endif;?><?php if(get_sub_field('remove_bottom_padding')):?> no-bottom-padding<?php endif;?>">
 	<div class="grid-container fluid">
 		
 		<?php if( have_rows('cards') ):?>

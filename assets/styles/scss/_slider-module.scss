@@ -1,0 +1,91 @@
+.slider.module {
+	overflow: hidden;
+	
+	.sm-slider {
+		position: relative;
+		
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		top: -10px;
+		bottom: -10px;
+		left: calc(-100% - 10px);
+		width: 100%;
+		background-color: $white;
+	}
+		
+		.slick-list {
+			width: 110%;
+			overflow: visible;
+			margin-left: -10px;
+			
+			.slick-track {
+				padding-bottom: 4px;
+			
+				.single-slide {
+					opacity: .32;
+					transition: opacity .3s ease 0s;
+						
+					.inner {
+						padding: 0 10px;
+						
+						.img-wrap {
+							padding-bottom: 1.75em;
+						}
+						
+						.bottom {
+							opacity: 0;
+							transition: opacity .3s ease 0s;
+						
+							p {
+								font-size: rem-calc(18);
+								line-height: 1.72;
+								font-weight: 500;
+								color: $heading-black;
+								margin-bottom: 1.4em;
+							}
+							
+							a.button {
+								background-color: $theme-purple;
+							}
+						
+						}
+						
+					}
+					
+				&.slick-current {
+					opacity: 1;
+					transition: opacity .3s ease .4s;
+					
+					.bottom {
+						opacity: 1;
+						transition: opacity .4s ease .3s;
+					}
+					
+				}
+					
+				}
+			
+			}
+			
+		}
+	}
+	
+	.slider-controls {
+		padding-bottom: 1em;
+		display: flex;
+		justify-content: flex-end;
+		
+		.inner {
+		
+			button {
+				padding: .2em;
+				margin: 0 .4em;
+			}
+			
+		}
+		
+	}
+	
+}

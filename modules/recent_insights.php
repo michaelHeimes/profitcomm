@@ -1,9 +1,9 @@
 <?php
-	$theme = get_field('page_theme');
+	$theme = get_sub_field('page_theme');
 	$theme_tax = $theme['value'];
 ?>
 
-<section class="recent-insights module">
+<section class="recent-insights module<?php if(get_sub_field('remove_top_padding')):?> no-top-padding<?php endif;?><?php if(get_sub_field('remove_bottom_padding')):?> no-bottom-padding<?php endif;?>">
 	<div class="grid-container fluid">
 		
 		<div class="top-wrap">

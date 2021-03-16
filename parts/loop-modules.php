@@ -26,6 +26,18 @@
 	
 	endif;?>
 
+	<?php if ( get_row_layout() == 'home_hero' ) : 
+	
+		get_template_part('modules/home_hero');
+	
+	endif;?>
+	
+	<?php if ( get_row_layout() == 'logo_grid' ) : 
+	
+		get_template_part('modules/logo_grid');
+	
+	endif;?>
+
 	<?php if ( get_row_layout() == 'people' ) : 
 	
 		get_template_part('modules/people');
