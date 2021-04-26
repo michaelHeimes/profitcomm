@@ -21,14 +21,25 @@
 	}
 	
 	.left {
-
+		.img-wrap,
+		.video-wrap {
+			margin-bottom: 3em;	
+			
+			@include breakpoint (tablet) {
+				margin-bottom: 0;
+			}
+			
+		}
 	}
 	
 	.right {
 		
 		.inner {
-			max-width: 400px;
 			margin: auto;
+			
+			@include breakpoint (tablet) {
+				max-width: 400px;
+			}
 		
 			h5 {
 				margin-bottom: 1.1em;

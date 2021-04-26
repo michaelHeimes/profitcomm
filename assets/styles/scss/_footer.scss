@@ -1,12 +1,19 @@
 footer.footer {
 	background-color: $heading-black;
 	color: $white;
-	padding-top: 9.05em;
-	padding-bottom: 5.55em;
+	padding-top: 2.8em;
+	padding-bottom: 0.65em;
 	margin-top: 4.15em;
 	
+	@include breakpoint(medium) {
+		padding-top: 9.05em;
+		padding-bottom: 5.55em;
+	}
+	
 	.left {
-		margin-bottom: 3em;
+		@include breakpoint(medium) {
+			margin-bottom: 3em;
+		}
 		
 		.inner {
 			max-width: 337px;
@@ -17,31 +24,15 @@ footer.footer {
 			}
 			
 			p {
-				font-size: rem-calc(20);
+				font-size: rem-calc(16);
 				font-weight: 500;
 				line-height: 1.7;
+				
+				@include breakpoint(medium) {
+					font-size: rem-calc(20);
+				}
+				
 			}
-			
-			.social-wrap {
-				display: flex;
-				
-				a {
-					margin-right: 1em;
-					width: 32px;
-					height: 32px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					background-color: #EFEDED;
-					border-radius: 100%;
-					
-				&:last-childer {
-					margin-right: 0;
-				}
-					
-				}
-				
-			} 
 			
 		}
 	}
@@ -50,22 +41,66 @@ footer.footer {
 		nav {
 			ul.menu {
 				li {
-					margin-bottom: 1.55em;
+					margin-bottom: 1.65em;
+					
+					@include breakpoint(medium) {
+						margin-bottom: 1.55em;
+					}
 					
 					a {
 						color: $white;
 						font-size: rem-calc(17);
 						font-weight: 500;
+						text-decoration: underline;
+						
+						@include breakpoint(medium) {
+							text-decoration: none;
+						}
+						
 					}
 				}
 			}
 		}
 	}
 	
+	.social-wrap {
+		padding-top: 2.9em;
+		
+		@include breakpoint(medium) {
+			padding-top: 0;
+		}
+		
+		a {
+			width: 45px;
+			height: 45px;
+			background-color: #EFEDED;
+			
+			img {
+				transform: scale(1.516);
+			}
+			
+			@include breakpoint(medium) {
+				width: 32px;
+				height: 32px;
+				
+				img {
+					transform: scale(1);
+				}
+				
+			}
+			
+		}
+		
+	} 
+	
 	p.source-org.copyright {
-		padding-top: 5em;
+		padding-top: 3.1em;
 		font-size: rem-calc(12);
     	letter-spacing: -.2px;
+    	
+    	@include breakpoint(medium) {
+			padding-top: 5em;
+    	}
     	
     	a {
 	    	color: $white;

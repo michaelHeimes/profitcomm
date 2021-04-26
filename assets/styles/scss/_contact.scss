@@ -1,0 +1,143 @@
+.page-template-page-contact {
+	
+	.content {
+		padding-top: 2.25em;
+		padding-bottom: 6.75rem;
+	}
+	
+	.left,
+	.right {
+		padding-top: 2rem;
+	}
+	
+	.left {
+		a {
+			color: $theme-orange;
+			text-decoration: underline;
+		}
+	}
+	
+	.right {
+		.gform_wrapper {
+			
+			.gfield_required {
+				color: #033E64;
+			}
+			
+			.top_label .gfield_label,
+			.field_sublabel_above .ginput_complex.ginput_container label {
+				font-size: rem-calc(17);
+				font-weight: 600;
+				color: #033E64;
+				
+				.gfield_required {
+					display: inline-block !important;
+				}
+			}
+			
+			.gfield_checkbox {
+				display: flex;
+				flex-wrap: wrap;
+				
+				li {
+					min-height: 31px;
+					flex: 1 1 50%;
+					padding: 0 19px !important;
+					
+					label {
+						padding-left: 22px;
+						font-size: rem-calc(17);
+						line-height: 1;
+						color: #033E64;
+						position: relative;
+						font-weight: 400;
+						
+						&:before,
+						&:after {
+						    content: '';
+						    display: block;
+						    position: absolute;
+						}
+						
+						&:before {
+						    width: 20px;
+						    height: 20px;
+						    border: 1px solid #033E64;
+						    background-color: $white;
+						    left: -18px;
+						}
+						
+						&:after {
+						    width: 16px;
+						    height: 16px;	
+						    background-color: $theme-blue;
+						    top: 2px;
+						    left: -16px;
+						    opacity: 0;				
+						}
+						
+					}
+					
+					input[type=checkbox] {
+						opacity: 0;
+						margin: 0;
+						
+						&:checked ~ label {
+							font-weight: 400;
+							
+							&:after {
+								opacity: 1;
+							}
+						}
+						
+					}
+										
+				}
+				
+			}
+			
+			input[type=text],
+			textarea {
+				margin-top: 2px;
+				padding: 0 !important;
+				border-bottom: 1px solid #033E64;
+				
+				&:focus {
+					border-bottom: 1px solid $primary-color;
+				}
+				
+				&::placeholder {
+					color: $theme-blue;
+				}
+				
+			}
+			
+			input[type=text] {
+				height: 2rem;
+			}
+			
+			textarea {
+				height: 1.75rem;
+				min-height: 1.75rem;
+			}
+			
+			.gform_footer {
+			
+				.gform_button {
+					line-height: 1 !important;
+					background-color: $theme-green;
+					font-size: rem-calc(26);
+					font-weight: bold;
+					text-transform: uppercase;
+					padding: .6154em 1em;
+					border-radius: 30px;
+					width: 100%;
+					max-width: 360px;
+				}
+			
+			}
+			
+		}
+	}
+	
+}

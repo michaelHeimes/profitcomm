@@ -4,52 +4,59 @@
  *
  * For more info: http://jointswp.com/docs/off-canvas-menu/
  */
-
-if ( !is_single() ) {
-	$theme = get_field('page_theme');
-}
  
+	if ( !is_single() ) {
+		$theme = get_field('page_theme');
+	}
+
+	if ( is_single() ) {
+		$first_term = get_the_terms( $post->ID, 'site_theme' )[0];
+	}
+	
 ?>
 
 <div class="top-bar" id="top-bar-menu">
 	
-	<div class="top-bar-top"><?php joints_pre_nav();?></div>
+	<div class="top-bar-top show-for-tablet"><?php joints_pre_nav();?></div>
 	
 	<div class="top-bar-left float-left">
 		<ul class="menu">
 			
 			<li><a href="<?php echo home_url(); ?>">
-			
-			<?php if( !empty($theme) && $theme['value'] == 'rfp-alternative' ):?>
 				
-				<?php 
-				$image = get_field('top_bar_logo_white', 'option');
-				if( !empty( $image ) ): ?>
-				    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-				<?php endif; ?>
-								
-			<?php else:?>
-							
-				<?php 
-				$image = get_field('top_bar_logo', 'option');
-				if( !empty( $image ) ): ?>
-				    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-				<?php endif; ?>
-						
-			<?php endif;?>
-			
+				<svg xmlns="http://www.w3.org/2000/svg" width="233.107" height="41.15" viewBox="0 0 233.107 41.15">
+				  <g id="Group_317" data-name="Group 317" transform="translate(-56 -54.85)">
+				    <path id="Path_275" data-name="Path 275" d="M742.893,732.918a20.575,20.575,0,1,0,20.575,20.575A20.575,20.575,0,0,0,742.893,732.918Zm-10.987,33.493a16.96,16.96,0,1,1,27.3-17.581H752.92a7.414,7.414,0,0,0-1.624-3.4,7.944,7.944,0,0,0-6.339-2.573H731.906Zm10.987,4.041a16.888,16.888,0,0,1-7.631-1.811V758.337h5v-2.722h-5V745.77H744.4c2.675,0,4.465,1.047,5.1,3.06h-.377a7.943,7.943,0,0,0-6.339,2.573,7.7,7.7,0,0,0-1.79,5.071c0,4.885,2.8,7.831,8.614,7.831h6.349A16.924,16.924,0,0,1,742.893,770.452Zm6.978-8.869c-3,0-4.747-1.209-5.332-3.248,4.933-.029,7.668-2.2,8.345-5.881h-3.4c-.6,1.936-2.265,3.1-5.092,3.155.386-2.544,2.28-3.87,5.3-3.87h10.078a17.2,17.2,0,0,1,.09,1.754,16.883,16.883,0,0,1-2.05,8.09Z" transform="translate(-666.318 -678.068)" fill="#27a456"/>
+				    <g id="Group_315" data-name="Group 315" transform="translate(102.483 63.992)">
+				      <path id="Path_276" data-name="Path 276" d="M962.042,782.757h11.708c3.1,0,5.407.895,6.973,2.5a8.534,8.534,0,0,1,2.386,6.078c0,5.034-3.319,8.427-8.912,8.427h-6.563v9.658h-5.593Zm5.593,12.6h5.593c2.834,0,4.325-1.566,4.325-3.99,0-2.5-1.566-3.915-4.251-3.915h-5.668Z" transform="translate(-962.042 -782.235)" fill="#fff"/>
+				      <path id="Path_277" data-name="Path 277" d="M1079.851,823.73h.112c1.156-2.163,2.461-3.281,4.7-3.281a3.311,3.311,0,0,1,1.193.149v4.437h-.112c-3.319-.336-5.705,1.417-5.705,5.444V839.8h-5.071V820.673h4.884Z" transform="translate(-1053.071 -812.618)" fill="#fff"/>
+				      <path id="Path_278" data-name="Path 278" d="M1129.872,829.015a9.994,9.994,0,1,1,9.993,10.105A9.726,9.726,0,0,1,1129.872,829.015Zm14.841,0c0-3.729-1.753-6.265-4.847-6.265-3.132,0-4.848,2.536-4.848,6.265s1.715,6.227,4.848,6.227C1142.96,835.243,1144.713,832.744,1144.713,829.015Z" transform="translate(-1097.329 -811.378)" fill="#fff"/>
+				      <path id="Path_279" data-name="Path 279" d="M1230.487,790.057h2.611v-1.715c0-4.661,3.617-6.3,8.5-5.78v3.916c-2.387-.112-3.431.186-3.431,2.163v1.417h10v3.505h-10v15.624H1233.1V793.562h-2.611Z" transform="translate(-1178.435 -782.003)" fill="#fff"/>
+				      <path id="Path_280" data-name="Path 280" d="M1328.064,796.8h2.648v-5.966h4.959V796.8h3.281v3.356h-3.281V810.3a1.678,1.678,0,0,0,1.9,1.9c.634,0,1.492-.037,1.492-.037v3.729s-1.156.074-3.17.074c-2.461,0-5.183-.969-5.183-4.586V800.156h-2.648Z" transform="translate(-1257.092 -788.746)" fill="#fff"/>
+				      <path id="Path_281" data-name="Path 281" d="M1387.12,794.011c0-7.905,4.922-13.946,12.79-13.946,6.563,0,10.441,3.915,11,8.986h-5.37c-.485-2.685-2.5-4.437-5.631-4.437-4.922,0-7.271,4.1-7.271,9.4,0,5.444,2.834,9.359,7.308,9.359,3.17,0,5.407-1.9,5.742-4.7h5.3a9.442,9.442,0,0,1-2.946,6.3,11.271,11.271,0,0,1-8.092,2.834C1392.452,807.808,1387.12,802.028,1387.12,794.011Z" transform="translate(-1304.697 -780.065)" fill="#fff"/>
+				      <path id="Path_282" data-name="Path 282" d="M1514.564,829.015a9.994,9.994,0,1,1,9.993,10.105A9.726,9.726,0,0,1,1514.564,829.015Zm14.841,0c0-3.729-1.753-6.265-4.848-6.265-3.132,0-4.847,2.536-4.847,6.265s1.715,6.227,4.847,6.227C1527.652,835.243,1529.405,832.744,1529.405,829.015Z" transform="translate(-1407.429 -811.378)" fill="#fff"/>
+				      <path id="Path_283" data-name="Path 283" d="M1624.526,819.432h4.885v2.573h.112a6.246,6.246,0,0,1,5.556-3.1,5.708,5.708,0,0,1,5.3,3.356h.075a6.672,6.672,0,0,1,5.742-3.356c4.027,0,6.3,2.61,6.3,6.787v12.865h-5.071V826.554c0-2.163-1.082-3.281-2.946-3.281-2.125,0-3.43,1.641-3.43,4.176v11.112h-5.071V826.554c0-2.163-1.081-3.281-2.946-3.281-2.051,0-3.43,1.641-3.43,4.176v11.112h-5.071Z" transform="translate(-1496.069 -811.378)" fill="#fff"/>
+				      <path id="Path_284" data-name="Path 284" d="M1780.28,819.432h4.885v2.573h.112a6.245,6.245,0,0,1,5.556-3.1,5.708,5.708,0,0,1,5.3,3.356h.075a6.672,6.672,0,0,1,5.742-3.356c4.027,0,6.3,2.61,6.3,6.787v12.865h-5.071V826.554c0-2.163-1.081-3.281-2.946-3.281-2.126,0-3.431,1.641-3.431,4.176v11.112h-5.071V826.554c0-2.163-1.081-3.281-2.946-3.281-2.051,0-3.43,1.641-3.43,4.176v11.112h-5.071Z" transform="translate(-1621.623 -811.378)" fill="#fff"/>
+				      <g id="Group_314" data-name="Group 314" transform="translate(64.663 0.188)">
+				        <circle id="Ellipse_154" data-name="Ellipse 154" cx="2.536" cy="2.536" r="2.536" fill="#fff"/>
+				        <rect id="Rectangle_249" data-name="Rectangle 249" width="5.071" height="19.129" transform="translate(0 7.867)" fill="#fff"/>
+				      </g>
+				    </g>
+				  </g>
+				</svg>
+
 			</a></li>
 			
 			<li class="show-for-sr"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
 		</ul>
 	</div>
-	<div class="top-bar-right show-for-medium">
+	<div class="top-bar-right show-for-tablet">
 		<?php joints_top_nav(); ?>	
 	</div>
-	<div class="top-bar-right float-right show-for-small-only">
+	<div class="top-bar-right float-right hide-for-tablet">
 		<ul class="menu">
 			<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-			<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
+			<li><a id="mobile-toggle"><span></span><span></span><span></span></a></li>
 		</ul>
 	</div>
 </div>

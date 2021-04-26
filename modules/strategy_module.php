@@ -30,7 +30,7 @@
 		<?php endif;?>
 			
 		<?php if( have_rows('process_steps') ):?>
-		<div class="steps-wrap grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-<?php echo $steps_num;?> justify-center">	
+		<div class="steps-wrap grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-<?php echo $steps_num;?> justify-center" data-equalizer data-equalize-on="medium" data-equalize-on-stack="true">	
 			<?php while ( have_rows('process_steps') ) : the_row();?>
 			
 			<?php $steps_num = get_row_index();?>
@@ -49,9 +49,13 @@
 							</div>
 							<?php endif; ?>
 							
-							<h4><?php the_sub_field('name');?></h4>
+							<div class="text-wrap" data-equalizer-watch>
 							
-							<p><?php the_sub_field('details');?></p>
+								<h4><?php the_sub_field('name');?></h4>
+								
+								<p><?php the_sub_field('details');?></p>
+							
+							</div>
 						
 						</div>
 					</div>

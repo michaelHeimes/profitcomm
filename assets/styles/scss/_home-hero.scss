@@ -2,34 +2,68 @@
 	background-color: #001E31;
 	color: $white;
 	position: relative;
-	padding-top: 5.4em;
-    padding-bottom: 5.9em;
+	padding-top: 2.4em;
+	padding-bottom: 1.9em;	    
+    
+    @include breakpoint(medium) {
+		padding-top: 5.4em;
+		padding-bottom: 5.9em;	    
+    }
 	
 	.left {
-	
+		padding-bottom: 3.9em;
+		
+		@include breakpoint(medium) {
+			padding-bottom: 0;
+		}
+		
 		h1 {
 			color: $white;
 		}
 		
 		a.button {
 			text-transform: uppercase;
-			background-color: $theme-brown;
+			background-color: $theme-orange;
 		}
 	
 	}
 	
 	.right {
 		color: $white;
+		position: relative;
+		
+		@include breakpoint(tablet) {
+			position: static;
+		}
+		
 	}
 	
 	.cta-wrap {
-		position: absolute;
-		right: -2em;
-		bottom: 5.9em;
-		
+		display: inline-block;
+		margin-top: 2.5em;
 		background-color: $theme-green;
-		border-radius: $global-radius;
-		padding: 1.85em 4em 1.85em 3em;
+		padding: 1.85em 2em 1.85em 2em;
+		width: 100%;
+		
+		.inner {
+			display: inline-block;
+		}
+		
+		@include breakpoint(medium) {
+			width: auto;
+			border-radius: $global-radius;
+			padding: 1.85em 4em 1.85em 2em;
+			display: block;
+			margin-top: 0;
+			position: absolute;
+			right: -2em;
+			bottom: 0;
+		}
+		
+		@include breakpoint(tablet) {
+			bottom: 5.9em;
+			padding: 1.85em 4em 1.85em 3em;
+		}
 				
 		h2,
 		a {

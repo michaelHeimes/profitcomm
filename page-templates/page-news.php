@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Insights Page
+ * Template Name: News Page
  *
  * This is the template that displays all pages by default.
  */
@@ -34,6 +34,7 @@ get_header(); ?>
 				</div>
 			        
 			   
+<!--
 			    <div class="filter-buttons-container grid-container fluid insights-cards-wrap">
 				    
 				    <div class="filter-buttons grid-x grid-padding-x align-center">
@@ -61,8 +62,9 @@ get_header(); ?>
 					</div>
 					
 			    </div>
+-->
 			    				    			    
-			    <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="post-grid grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3" post_type="insights_post" taxonomy="site_theme" taxonomy_terms="" taxonomy_operator="IN" posts_per_page="9" images_loaded="true" scroll="false" transition_container="false" button_label="Load More Insights"]');?>
+			    <?php echo do_shortcode('[ajax_load_more container_type="div" css_classes="post-grid grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3" post_type="news_post" posts_per_page="9" images_loaded="true" scroll="false" transition_container="false" button_label="Load More News"]');?>
 		
 			</main> <!-- end #main -->
 		    

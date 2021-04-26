@@ -11,11 +11,11 @@
 		
 	<a class="small-caps grid-x grid-padding-x align-middle" href="<?php echo get_permalink();?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 
-		<div class="left cell auto">
+		<div class="left cell small-12 medium-auto">
 			<h3><?php the_title();?></h3>
 		</div>
 		
-		<div class="right cell shrink">
+		<div class="right cell small-12 medium-shrink">
 			<span>Read More</span>
 			<svg xmlns="http://www.w3.org/2000/svg" width="17.002" height="11.773" viewBox="0 0 17.002 11.773">
 			  <g id="Group_277" data-name="Group 277" transform="translate(-1558.964 -2554.301)">

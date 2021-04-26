@@ -2,7 +2,7 @@
 	<div class="grid-container<?php if( get_field('width') == 'wide' ):?> fluid<?php endif;?>">
 		<div class="grid-x grid-padding-x layout-<?php the_sub_field('layout');?>">
 			
-			<div class="left cell small-12 medium-6">
+			<div class="left cell small-12 tablet-6">
 
 				<?php if ( get_sub_field('media_type') == 'image' ):?>
 					<div class="img-wrap">
@@ -48,7 +48,7 @@
 				
 			</div>
 			
-			<div class="right cell small-12 medium-6">
+			<div class="right cell small-12 tablet-6">
 				
 				<div class="inner">
 				

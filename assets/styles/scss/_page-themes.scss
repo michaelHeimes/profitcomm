@@ -1,14 +1,11 @@
-body.vendor-audit {
-	
-}
-
-body.vendor-audit {
+body.vendor-audit,
+body.page-template-page-contact {
 	
 	header.header {
 		background-color: $theme-purple;
 		
 		ul.menu#pre-nav li a {
-			color: $white;
+			color: $theme-green;
 		}
 	
 	}
@@ -20,7 +17,12 @@ body.vendor-audit {
 	}
 	
 	.content.insight-content {
-		border-color: $theme-green;
+		border-color: $theme-purple;
+	}
+	
+	button,
+	.button {
+		background-color: $theme-purple;
 	}
 	
 }
@@ -45,13 +47,13 @@ body.rfp-alternative {
 	.content.insight-content {
 		border-color: $theme-green;
 	}
-	
+		
 }
 
 body.vendor-management {
 	
 	header.header {
-		background-color: $theme-brown;
+		background-color: $theme-orange;
 		
 		ul.menu#pre-nav li a {
 			color: $white;
@@ -61,12 +63,17 @@ body.vendor-management {
 	
 	article.page {
 		header.article-header {
-			background-color: $theme-brown;
+			background-color: $theme-orange;
 		}
 	}
 	
 	.content.insight-content {
-		border-color: $theme-green;
+		border-color: $theme-orange;
+	}
+	
+	button,
+	.button {
+		background-color: $theme-orange;
 	}
 	
 }
@@ -89,7 +96,12 @@ body.relocation-kit {
 	}
 	
 	.content.insight-content {
-		border-color: $theme-green;
+		border-color: $theme-blue;
+	}
+	
+	button,
+	.button {
+		background-color: $theme-blue;
 	}
 	
 }
@@ -132,12 +144,12 @@ article.insight-card {
 	
 	&.site_theme-vendor-management {
 		.inner {
-			background-color: $theme-brown;
+			background-color: $theme-orange;
 			
 			.top {
 				svg {
 					path {
-						fill: $theme-brown;
+						fill: $theme-orange;
 					}
 				}
 
@@ -167,6 +179,14 @@ article.insight-card {
 	
 }
 
+body.rfp-alternative,
+body.vendor-management,
+body.relocation-kit {
+	path#Path_275 {
+		fill: $white;
+	}
+}
+
 
 button {
 	
@@ -179,7 +199,7 @@ button {
 	}
 	
 	&.vendor-management {
-		background-color: $theme-brown;
+		background-color: $theme-orange;
 	}
 	
 	&.relocation-kit {

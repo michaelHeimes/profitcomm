@@ -52,7 +52,6 @@
 											
 						<div class="post-grid grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3" data-equalizer data-equalize-on="medium" data-equalize-on-stack="true">
 				
-				
 							<?php
 						    $args = array(  
 						        'post_type' => 'insights_post',

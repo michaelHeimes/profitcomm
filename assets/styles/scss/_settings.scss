@@ -68,7 +68,7 @@ $brand-primary: #27A456;
 
 $theme-purple: #033E64;
 $theme-green: $brand-primary;
-$theme-brown: #C75E04;
+$theme-orange: #C75E04;
 $theme-blue: #4C98C9;
 
 $heading-black: #002943;
@@ -96,7 +96,7 @@ $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: 300;
+$global-weight-normal: 400;
 $global-weight-bold: bold;
 $global-radius: 25px;
 $global-menu-padding: 0.1rem;
@@ -158,6 +158,14 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   medium: (
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 33),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
+    'h5': ('font-size': 19),
+    'h6': ('font-size': 16),
+  ),
+  large: (
     'h1': ('font-size': 60),
     'h2': ('font-size': 33),
     'h3': ('font-size': 31),
@@ -448,15 +456,15 @@ $input-line-height: $global-lineheight;
 $input-background: $white;
 $input-background-focus: $white;
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
+$input-border: 0px solid $medium-gray;
+$input-border-focus: 0px solid $primary-color;
 $input-padding: $form-spacing / 2;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow: inset 0 0 0 rgba($black, 0);
+$input-shadow-focus: 0 0 0 $medium-gray;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius: $global-radius;
+$input-radius: 0;
 $form-button-radius: $global-radius;
 
 // 21. Label
@@ -510,9 +518,9 @@ $offcanvas-sizes: (
 $offcanvas-vertical-sizes: (
   small: 250px,
 );
-$offcanvas-background: $light-gray;
-$offcanvas-shadow: 0 0 10px rgba($black, 0.7);
-$offcanvas-inner-shadow-size: 20px;
+$offcanvas-background: $theme-orange;
+$offcanvas-shadow: 0 0 0 rgba($black, 0);
+$offcanvas-inner-shadow-size: 0;
 $offcanvas-inner-shadow-color: rgba($black, 0.25);
 $offcanvas-overlay-zindex: 11;
 $offcanvas-push-zindex: 12;

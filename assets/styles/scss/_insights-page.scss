@@ -1,7 +1,21 @@
 .page-template-page-insights {
 	
-	.grid-container.fluid {
-		max-width: 78.376em;
+	main > article {
+		margin-bottom: 7.7em;
+	}
+	
+	h2 {
+		margin-bottom: .48em;
+	}
+	
+	.copy-wrap {
+		padding-bottom: 1.28em;
+		
+		p {
+			max-width: 480px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	
 	.filter-buttons {
@@ -53,7 +67,11 @@
 	
 	.alm-btn-wrap {
 		text-align: center;
-		margin-top: 200px;
+		margin-top: 110px;
+		
+		@include breakpoint(tablet) {
+			margin-top: 150px;
+		}
 		
 		button.alm-load-more-btn {
 			width: auto;

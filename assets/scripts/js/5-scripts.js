@@ -1,16 +1,35 @@
 (function($) {
 	'use strict';
 	
-	//Sticky header/mobile menun fix
-	$(document).on('click', 'a#menu-toggle', function(){
-		$('header').addClass('off-canvas-content is-open-right has-transition-push');
-	});
+// 	Allow tabbing through nav
+	$('.menu a[href="#"]').click(function(e) {
+		e.preventDefault ? e.preventDefault() : e.returnValue = false;
+	});	
+	
+	
+// 	Mobile Navigation
+    var $window = $(window);
+    var $mobileNav = $('div#off-canvas');
 
-	$(document).on('click', '.js-off-canvas-overlay', function(){
-		$('header').removeClass('off-canvas-content is-open-right has-transition-push');
-	});
+	$(document).on('click', 'a#mobile-toggle', function(){
+		$(this).toggleClass('clicked');
+		$('body').toggleClass('mobile-menu-open');
+		$mobileNav.fadeToggle(300);
+	});	
+	
+    function checkWidth() {
+        var windowsize = $window.width();
+        if (windowsize > 991) {
+            $mobileNav.fadeOut(300);
+            $('a#mobile-toggle').removeClass('clicked');
+            $('body').removeClass('mobile-menu-open');
+        }
+    }
+    checkWidth();
+    $(window).resize(checkWidth);
 	
 	
+// 	Slider
 	if( $('.sm-slider').length ) {
 	
 		$('.sm-slider').slick({
@@ -26,8 +45,12 @@
 	
 	}
 	
+// 	Wrap each mobile nav link with span for underlin effect
+	$('.off-canvas #offcanvas-nav li a').wrapInner('<span></span>')
 
-	if ($('body').hasClass('page-template-page-insights')) {
+
+// 	News and Insights Archives
+	if ( $('body').hasClass('page-template-page-insights') || $('body').hasClass('page-template-page-news') ) {
 		
 		$(window).on("load resize", function() {	
 			// Get an array of all element heights
@@ -46,6 +69,7 @@
 		window.almOnLoad = function(alm){
 			$('.ajax-load-more-wrap').addClass('grid-container');
 			$('.ajax-load-more-wrap').addClass('fluid');
+			$('.ajax-load-more-wrap').addClass('insights-cards-wrap');
 
 /*
 			$('.post-grid').attr('data-equalizer', '');
@@ -107,7 +131,11 @@
 			$('.post-grid').attr('data-count', $count)	
 */	   
 		};
-
+		
+	}
+	
+	if ($('body').hasClass('page-template-page-contact')) {
+		$('.ginput_container_name label').append('<span class="gfield_required">*</span>');
 	}
 	
 })(jQuery);

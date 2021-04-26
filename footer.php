@@ -34,7 +34,7 @@
 									<p><?php echo $footer_copy;?></p>
 									<?php endif;?>
 									
-									<div class="social-wrap">
+									<div class="social-wrap show-for-medium">
 										
 										<?php if ( $facebook_url = get_field('facebook_url', 'option')):?>
 										<a href="<?php echo $facebook_url;?>" target="_blank">
@@ -61,22 +61,50 @@
 										<?php endif;?>
 																							
 									</div>
-									
-									</div>
-									
+																		
 								</div>
 								
-								<div class="right cell small-12 medium-6">
-									
-									<nav role="navigation" class="grid-x grid-padding-x">
-										<?php joints_footer_links_left(); ?>
-			    						<?php joints_footer_links_right(); ?>
-			    					</nav>
-			    				
-								</div>
+							</div>
+								
+							<div class="right cell small-12 medium-6">
+								
+								<nav role="navigation" class="grid-x grid-padding-x">
+									<?php joints_footer_links_left(); ?>
+		    						<?php joints_footer_links_right(); ?>
+		    					</nav>
+		    				
+							</div>
+							
+							<div class="cell small-12 social-wrap hide-for-medium">
+								
+								<?php if ( $facebook_url = get_field('facebook_url', 'option')):?>
+								<a href="<?php echo $facebook_url;?>" target="_blank">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-facebook-gray.svg"/>
+								</a>
+								<?php endif;?>
+
+								<?php if ( $instagram_url = get_field('instagram_url', 'option')):?>
+								<a href="<?php echo $instagram_url;?>" target="_blank">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-instagram-gray.svg"/>
+								</a>
+								<?php endif;?>
+
+								<?php if ( $twitter_url = get_field('twitter_url', 'option')):?>
+								<a href="<?php echo $twitter_url;?>" target="_blank">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-twitter-gray.svg"/>
+								</a>
+								<?php endif;?>
+								
+								<?php if ( $linkedin_url = get_field('linkedin_url', 'option')):?>
+								<a href="<?php echo $linkedin_url;?>" target="_blank">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-linkedin-gray.svg"/>
+								</a>
+								<?php endif;?>
+																					
+							</div>
 							
 							<div class="small-12 medium-12 large-12 cell">
-								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a href="https://proprdesign.com/" target="_blank">Made by Propr Design</a></p>
+								<p class="source-org copyright">&copy; Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | <a href="https://proprdesign.com/" target="_blank">Made by Propr Design</a></p>
 							</div>
 						
 						</div> <!-- end #inner-footer -->

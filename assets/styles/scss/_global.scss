@@ -3,6 +3,46 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
+
+/*********************
+COMMON ELEMENTS
+*********************/
+.insights-cards-wrap.grid-container.fluid {
+	max-width: 640px;
+    margin: auto;
+    
+    @include breakpoint(tablet) {
+	    max-width: 992px;
+    }
+
+    @include breakpoint(large) {
+	    max-width: 1024px;
+    }
+    
+    @media screen and (min-width: 1240px) {
+	    max-width: 78.376em;
+    }
+    
+}
+
+.social-wrap {
+	display: flex;
+	
+	a {
+		margin-right: 1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 100%;
+		
+	&:last-childer {
+		margin-right: 0;
+	}
+		
+	}
+	
+} 
+
 /*********************
 TYPOGRAPHY
 *********************/
@@ -94,13 +134,23 @@ POSTS & CONTENT STYLES
 
 .home-hero,
 header.article-header {
-	margin-bottom: 3.6em;
+	margin-bottom: 3.09em;
+	
+	@include breakpoint(medium) {
+		margin-bottom: 3.6em;
+	}
 }
 
 section.module {
 	> .grid-container {
-		padding-top: 5.09em;
-		padding-bottom: 5.09em;
+		padding-top: 2.09em;
+		padding-bottom: 2.09em;
+		
+		@include breakpoint (medium) {
+			padding-top: 5.09em;
+			padding-bottom: 5.09em;			
+		}
+		
 	}
 	
 &.no-top-padding {
