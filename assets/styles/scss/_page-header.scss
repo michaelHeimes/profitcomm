@@ -3,10 +3,20 @@ article.page {
 		padding-top: 7.3em;
 		padding-bottom: 9.8em;
 		background-color: $theme-purple;
+		background-repeat: no-repeat;
+		background-size: cover;
 		
 		h1 {
 			color: $white;
 		}
 		
+	}
+}
+
+body.rfp-alternative {
+	article.page {
+		header.article-header {
+			margin-bottom: 0;
+		}
 	}
 }

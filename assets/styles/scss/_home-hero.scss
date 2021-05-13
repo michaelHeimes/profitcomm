@@ -1,13 +1,37 @@
 .home-hero {
+	overflow: hidden;
 	background-color: #001E31;
 	color: $white;
 	position: relative;
-	padding-top: 2.4em;
+	padding-top: 5.4em;
 	padding-bottom: 1.9em;	    
     
     @include breakpoint(medium) {
 		padding-top: 5.4em;
 		padding-bottom: 5.9em;	    
+    }
+    
+    video {
+	    position: absolute;	    
+		top: 50%;
+	    left: 50%;
+	    height: 100%;
+	    transform: translate(-50%, -50%);
+	    min-width: 300vh;
+	    
+	    @include breakpoint(medium) {
+	    	top: 0;
+	    	left: 0;
+	    	height: auto;
+			min-width: 100%;
+	    	transform: translate(0%, 0%);
+	    }
+	    
+    }
+    
+    .left,
+    .right {
+	    position: relative;
     }
 	
 	.left {

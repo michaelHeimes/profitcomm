@@ -33,8 +33,9 @@
 		<?php wp_head(); ?>
 
 	</head>
+	
 			
-	<body <?php body_class(); ?>>
+	<body <?php if( get_field('banner_background_image') || is_front_page() ):?><?php body_class('header-bg-img'); ?><?php else:?><?php body_class(); ?><?php endif;?>>
 
 		<div class="off-canvas-wrapper">
 			
@@ -43,7 +44,8 @@
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				
-				<header class="header<?php if ( get_field('hide_title_banner')) :?> has-home-hero<?php endif;?>" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+<!-- 				<header class="header<?php if ( get_field('hide_title_banner')) :?> has-home-hero<?php endif;?>" role="banner" data-sticky data-margin-top="0" data-sticky-on="small"> -->
+				<header class="header<?php if ( get_field('hide_title_banner') ) :?> has-home-hero<?php endif;?>" role="banner" <?php $bg_image = get_field('banner_background_image'); if( empty($bg_image) && !is_front_page() ):?>data-sticky data-margin-top="0" data-sticky-on="small"<?php endif;?>>
 					<div class="grid-container fluid">
 					 <!-- This navs will be applied to the topbar, above all content 
 						  To see additional nav styles, visit the /parts directory -->

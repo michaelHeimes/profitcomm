@@ -5,6 +5,45 @@
 	$('.menu a[href="#"]').click(function(e) {
 		e.preventDefault ? e.preventDefault() : e.returnValue = false;
 	});	
+
+        	
+// 	Banner spacing for pages with banner bg images
+
+	if ( $('body').hasClass('header-bg-img') ) {
+
+		function setPadding() {
+			var $navHeight = $('header.header').height();
+			var $bannerTopPadding = $('header.article-header').css('padding-top');
+			var $homeHeroTopPadding = $('.home-hero').css('padding-top');
+			var $newHHPadding = parseInt($navHeight, 10) + parseInt($homeHeroTopPadding, 10) + 'px';
+			var $newPadding = parseInt($navHeight, 10) + parseInt($bannerTopPadding, 10) + 'px';
+						
+			$('.home-hero').css('padding-top', $newHHPadding);
+			$('header.article-header').css('padding-top', $newPadding);
+			
+		};
+		setPadding();
+		
+		
+		$(function() {
+		    var header = $('header.header');
+		    $(window).scroll(function() {
+		        var scroll = $(window).scrollTop();
+		
+		        if (scroll >= 10) {
+		            header.removeClass('clear-header').addClass("dark-header");
+		        } else {
+		            header.removeClass('dark-header').addClass('clear-header');
+		        }
+		    });
+		    
+		    if(window.scrollY >= 10){
+			    header.removeClass('clear-header').addClass("dark-header");
+		    }	    
+		    
+		});
+		
+	}
 	
 	
 // 	Mobile Navigation

@@ -6,7 +6,8 @@ register_nav_menus(
 		'main-nav'		=> __( 'The Main Menu', 'jointswp' ),		// Main nav in header
 		'offcanvas-nav'	=> __( 'The Off-Canvas Menu', 'jointswp' ),	// Off-Canvas nav
 		'footer-links-left'	=> __( 'Footer Links Left', 'jointswp' ),			// Secondary nav in footer
-		'footer-links-right' => __( 'Footer Links Right', 'jointswp' )			// Secondary nav in footer
+		'footer-links-right' => __( 'Footer Links Right', 'jointswp' ),		// Secondary nav in footer
+		'rfp-alt-nav' => __( 'RFP Alternative Menu', 'jointswp' )
 	)
 );
 
@@ -30,7 +31,7 @@ function joints_top_nav() {
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
 		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown" data-hover-delay="0" data-closing-time="0">%3$s</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
@@ -90,6 +91,18 @@ function joints_footer_links_right() {
 		'fallback_cb'		=> ''					// Fallback function
 	));
 } /* End Footer Menu */
+
+// RFP Menu
+function joints_rfp_alt_nav() {
+	wp_nav_menu(array(
+		'container'			=> 'false',				// Remove nav container
+		'menu_id'			=> 'rfp-alt-nav',		// Adding custom nav id
+		'menu_class'		=> 'menu vertical cell small-6',				// Adding custom nav class
+		'theme_location'	=> 'rfp-alt-nav',		// Where it's located in the theme
+		'depth'				=> 0,					// Limit the depth of the nav
+		'fallback_cb'		=> ''					// Fallback function
+	));
+} /* End RFP Menu */
 
 // Header Fallback Menu
 function joints_main_nav_fallback() {
