@@ -55,11 +55,19 @@ body.vendor-management {
 	header.header {
 		background-color: $theme-orange;
 		
-		ul.menu#pre-nav li a {
-			color: $white;
+		ul.menu#pre-nav li {
+			a {
+				color: $white;
+			}
+			
+		&.button-link a {
+			color: $theme-orange;
+		}
+			
 		}
 	
 	}
+	
 	
 	article.page {
 		header.article-header {
@@ -83,8 +91,15 @@ body.relocation-kit {
 	header.header {
 		background-color: $theme-blue;
 		
-		ul.menu#pre-nav li a {
-			color: $white;
+		ul.menu#pre-nav li {
+			a {
+				color: $white;
+			}
+			
+		&.button-link a {
+			color: $theme-blue;
+		}
+			
 		}
 	
 	}

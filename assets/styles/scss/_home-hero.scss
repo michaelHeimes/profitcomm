@@ -45,6 +45,12 @@
 			color: $white;
 		}
 		
+		p {
+			font-weight: 700;
+		    font-size: rem-calc(20);
+		    line-height: 1.5;
+		}
+		
 		a.button {
 			text-transform: uppercase;
 			background-color: $theme-orange;

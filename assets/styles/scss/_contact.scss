@@ -11,6 +11,11 @@
 	}
 	
 	.left {
+		
+		h2 {
+			margin-bottom: 0.35em;
+		}
+		
 		a {
 			color: $theme-orange;
 			text-decoration: underline;
@@ -97,6 +102,8 @@
 			}
 			
 			input[type=text],
+			input[type=email],
+			input[type=tel],
 			textarea {
 				margin-top: 2px;
 				padding: 0 !important;

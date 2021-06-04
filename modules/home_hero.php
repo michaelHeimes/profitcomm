@@ -1,6 +1,6 @@
 <header class="home-hero">
 
-	<video muted="" loop="" id="big-video" class="banner-bg" preload="auto" autoplay="" src="<?php echo get_template_directory_uri(); ?>/assets/videos/adobestock-190518271-video-4k-preview_leoQPwJV.mp4"></video>
+	<video muted="" loop="" id="big-video" class="banner-bg" preload="auto" autoplay="" src="<?php echo get_template_directory_uri(); ?>/assets/videos/Homepage-Video-Sequence-(compressed).mp4"></video>
 			
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">

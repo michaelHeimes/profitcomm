@@ -12,7 +12,7 @@
 			<div class="cell small-12"
 							
 				<header class="article-header">	
-					<?php get_template_part( 'parts/content', 'insight-byline' ); ?>
+					<?php get_template_part( 'parts/content', 'news-byline' ); ?>
 					<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 			    </header> <!-- end article header -->
 								

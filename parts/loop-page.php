@@ -22,10 +22,10 @@
 	</header> <!-- end article header -->
 	
 		<?php 
-		
+			
 		$theme = get_field('page_theme');
 		
-		if( $theme['value'] == 'rfp-alternative' ):?>
+		if( !empty($theme) && $theme['value'] == 'rfp-alternative' ):?>
 		<div class="rfp-nav-wrap">
 			<div class="grid-container">
 				<div class="grid-x grid-padding-x">
