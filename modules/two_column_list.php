@@ -19,10 +19,11 @@
 			<?php if( have_rows('single_row') ):?>
 				<?php while ( have_rows('single_row') ) : the_row();?>	
 				
-					<?php if( get_sub_field('add_link') ):?>
 					
 						<?php
-							$link = get_field('link');
+							$link = get_sub_field('link');
+							
+							if( $link ):
 							$link_url = $link['url'];
 						    $link_title = $link['title'];
 						    $link_target = $link['target'] ? $link['target'] : '_self';
